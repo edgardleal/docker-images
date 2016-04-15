@@ -18,9 +18,5 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 yum -y install jdk-8u40-linux-x64.rpm && \
 rm jdk-8u40-linux-x64.rpm &&  yum clean all
 
-
-RUN useradd java
-USER java
-
 RUN ["java","-version"]
 CMD /bin/bash
