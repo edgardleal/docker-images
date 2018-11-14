@@ -12,7 +12,7 @@ ENV	JMETER_DOWNLOAD_URL  http://mirrors.ocf.berkeley.edu/apache/jmeter/binaries/
 # Install extra packages
 # See https://github.com/gliderlabs/docker-alpine/issues/136#issuecomment-272703023
 # Change TimeZone TODO: TZ still is not set!
-ARG TZ="Europe/Amsterdam"
+ARG TZ="America/Bahia"
 RUN    apk update \
 	&& apk upgrade \
 	&& apk add ca-certificates \
@@ -36,4 +36,3 @@ COPY entrypoint.sh /
 
 WORKDIR	${JMETER_HOME}
 
-ENTRYPOINT ["/entrypoint.sh"]
