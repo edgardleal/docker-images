@@ -26,7 +26,7 @@ echo "JVM_ARGS=${JVM_ARGS}"
 echo "jmeter args=$@"
 
 # Keep entrypoint simple: we must pass the standard JMeter arguments
-jmeter $@
+jmeter $@ | grep 'Err: *0 '
 echo "END Running Jmeter on `date`"
 
 #     -n \
